@@ -28,3 +28,9 @@ def insertar_inmueble(data):
         numero_hab = numero_hab,
         direccion = direccion
     )
+
+def actualizar_desc_inmueble(id_inmueble, new_descrip):
+    Inmueble.objects.filter(pk=id_inmueble).update(descripcion=new_descrip)
+
+def eliminar_inmueble(id_inmueble):
+    Inmueble.objects.get(id=id_inmueble).delete()
