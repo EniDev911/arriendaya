@@ -76,8 +76,12 @@ WSGI_APPLICATION = "_site.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "arriendaya", # 👈 base de datos postgres
+        "USER": "postgres", # 👈 usuario para postgres
+        "PASSWORD": "postgres", # 👈 password para postgres
+        "HOST": "localhost",
+        "PORT": 5432
     }
 }
 
