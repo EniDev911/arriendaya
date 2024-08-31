@@ -32,8 +32,18 @@ def get_inmuebles_by_comuna(comuna):
         for result in results:
           xfile.write(result.nombre_inmueble+", "+result.descripcion)
           xfile.write("\n")
-          
-get_inmuebles_by_comuna("Bernardo")
 
+# get_inmuebles_by_comuna("Bernardo")
+
+def get_inmuebles_by_region(id):
+    region = Region.objects.get(pk=id).region
+    inmuebles = Inmueble.objects.filter(id_region_id=id)
+
+    with open("datos.txt", "w") as xfile:
+        for inmueble in inmuebles:
+          xfile.write(f"{inmueble.nombre_inmueble}, {region}")
+          xfile.write("\n")
+
+get_inmuebles_by_region(16)
 
     
