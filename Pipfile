@@ -8,7 +8,6 @@ django = "*"
 psycopg2-binary = "*"
 
 [dev-packages]
-bpython = "*"
 
 [requires]
 python_version = "3.10"
