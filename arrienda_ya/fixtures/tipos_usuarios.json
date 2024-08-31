@@ -1,0 +1,17 @@
+ 
+[
+    {
+        "model": "arrienda_ya.tipousuario",
+        "pk": 1,
+        "fields": {
+            "tipo_user": "Arrendador"
+        }
+    },
+    {
+        "model": "arrienda_ya.tipousuario",
+        "pk": 2,
+        "fields": {
+            "tipo_user": "Arrendatario"
+        }
+    }
+]
