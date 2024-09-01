@@ -6,6 +6,7 @@ class Usuario(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    id_tipo_user = models.ForeignKey("TipoUsuario", on_delete=models.CASCADE, null=True)
     rut = models.CharField(max_length=100)
     direccion = models.TextField()
     telefono = models.TextField()
